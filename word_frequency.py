@@ -50,9 +50,10 @@ def print_word_freq(filename):
     text = normalize_text(text)
     words = []
     for word in text.split(" "):
-        # '<sample_string>.split(sep=None, maxsplit=-1)' method will split 'text' using blank spaces as the delimiter and returns a list of words
+        # '<sample_string>.split(sep=None, maxsplit=-1)' method will split 'text' using 'blank space' as the delimiter and returns a list of words
         if word != '' and word not in STOP_WORDS:
             words.append(word)
+                # '<sample_list>.append(x)' method appends a new item with value 'x' (in this case 'word') to the end of the list named 'words' https://docs.python.org/3.7/library/array.html?highlight=append#array.array.append
 
     # sort 'words' list alphanumerically
     words = sorted(words, key=str.lower) 
@@ -111,6 +112,8 @@ if __name__ == "__main__":
 
 # questions:
 # how does this statement: 'sorted(word_count.items(), key=lambda x: x[1], reverse=True)' work?
+# I see 'arrays' as data types in the python standard library, are they the same as lists? 
+
 
 # output: 
 #              her | 33 *********************************
